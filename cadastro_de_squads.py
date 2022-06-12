@@ -62,3 +62,5 @@ while True:
     option = input('\nDeseja adicionar mais uma squad? [S/N]: ')
     if option in 'Nn':
         break
+
+        
