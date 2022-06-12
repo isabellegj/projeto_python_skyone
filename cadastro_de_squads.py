@@ -13,14 +13,11 @@ class Squad:
         self.devs = []
         self.techlead = techlead
 
-        def incluir_techlead(self, techlead):
-            self.techlead = techlead
+    def incluir_techlead(self, techlead):
+        self.techlead = techlead
 
-        def incluir_dev(self, dev):
-            self.devs.append(dev)
-
-        def incluir_dev(self, dev):
-            self.devs.append(dev)
+    def incluir_dev(self, dev):
+        self.devs.append(dev)
 
 
 class Colaborador(Pessoa):
@@ -39,8 +36,7 @@ class Dev(Colaborador):
 
     def exibir(self):
         super().exibir()
-        print(f'   Cargo de {self.cargo} na squad {self.squad}\n')
-
+        print(f'   Cargo de {self.cargo} na squad {self.squad.nome}\n')
 
 print('\n-==-=-=-=-=-=-=-=-=-=-=-Sky.One Solutions=-=-=-=-=-=-=-=-=-=-=-=-=-=-')
 print('Bem vindo ao Sistema de cadastro de squads"\n')
@@ -58,9 +54,10 @@ while True:
 
     squads.append(squad)
 
-    option = input('\nDeseja adicionar mais uma squad? [S/N]: ')
+    option = input('\nDeseja adicionar mais uma squad [S/N]: ')
     if option in 'Nn':
         break
+
 
 while True:
     nome_dev = input('\nNome do desenvolvedor: ')
@@ -68,8 +65,9 @@ while True:
     cargo_dev = input('Cargo do desenvolvedor: ')
     dev = Dev(nome_dev, fone_dev, cargo_dev)
     dev.incluir_squad(squad)
+    squad.incluir_dev(dev)
 
-    option = input('Deseja adicionar mais um dev? [S/N]: ')
+    option = input('Deseja adicionar mais um dev [S/N]: ')
     if option in 'Nn':
         break
 
@@ -84,5 +82,3 @@ for squad in squads:
     print(f'------------------------------{squad.nome}------------------------------')
 
 print('\n-==-=-=-=-=-=-=-=-=-=-=-Sky.One Solutions=-=-=-=-=-=-=-=-=-=-=-=-=-=-')
-
-
