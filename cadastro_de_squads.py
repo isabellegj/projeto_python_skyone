@@ -16,6 +16,9 @@ class Squad:
         def incluir_dev(self, dev):
             self.devs.append(dev)
 
+        def incluir_dev(self, dev):
+            self.devs.append(dev)
+
 
 class Colaborador(Pessoa):
     def __init__(self, nome, fone, squad=None):
@@ -44,6 +47,17 @@ while True:
     techlead.incluir_squad(squad)
 
     squads.append(squad)
+
+while True:
+    nome_dev = input('\nNome do desenvolvedor: ')
+    fone_dev = input('Telefone do desenvolvedor: ')
+    cargo_dev = input('Cargo do desenvolvedor: ')
+    dev = Dev(nome_dev, fone_dev, cargo_dev)
+    dev.incluir_squad(squad)
+
+    option = input('Deseja adicionar mais um dev? [S/N]: ')
+    if option in 'Nn':
+        break
 
     option = input('\nDeseja adicionar mais uma squad? [S/N]: ')
     if option in 'Nn':
