@@ -30,3 +30,9 @@ class Dev(Colaborador):
     def __init__(self, nome, fone, cargo, squad=None):
         super().__init__(nome, fone, squad)
         self.cargo = cargo
+
+
+squads = []
+nome_squad = input('\nNome da squad: ')
+nome_techlead = input('Nome do techlead da squad: ')
+fone_techlead = input('Telefone do techlead: ')
