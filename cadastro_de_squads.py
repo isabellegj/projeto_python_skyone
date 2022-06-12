@@ -48,6 +48,10 @@ while True:
 
     squads.append(squad)
 
+    option = input('\nDeseja adicionar mais uma squad? [S/N]: ')
+    if option in 'Nn':
+        break
+
 while True:
     nome_dev = input('\nNome do desenvolvedor: ')
     fone_dev = input('Telefone do desenvolvedor: ')
@@ -59,8 +63,4 @@ while True:
     if option in 'Nn':
         break
 
-    option = input('\nDeseja adicionar mais uma squad? [S/N]: ')
-    if option in 'Nn':
-        break
 
-        
